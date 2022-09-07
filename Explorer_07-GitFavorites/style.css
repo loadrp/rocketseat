@@ -151,6 +151,7 @@ td.remove, button.remove{
     font-weight:bold;
     background: none;
     border: none;
+    cursor: pointer;
 }
 td img{
     width: 50px;
@@ -168,4 +169,15 @@ td a{
     font-size: 1.0rem;
     color: #E1E1E6;
     text-decoration: none;
+}
+
+footer p{
+    text-align:center;
+    font-size: 1.2rem;
+  
+}
+
+footer p a{
+    text-decoration: none;
+    color: #fefefe;
 }

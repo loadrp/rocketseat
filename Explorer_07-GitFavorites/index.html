@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="./js/main.js" defer type="module"></script>
 
     <title>Github Favorites</title>
 
@@ -23,7 +24,7 @@
         
           <div class="search-container">
               <label class="sr-only" for="input-search">Usuáraio do Github</label>
-              <input type="text"><button>Favoritar</button></div>
+              <input id="inputFav" type="text"><button id="btnFav">Favoritar</button></div>
           </div>
     </header>
     <main>
@@ -61,13 +62,17 @@
                     </td>
                     <td class="repos">2</td>
                     <td class="followers">123</td>
-                    <td class="remove"><button class="remove">Teste</button></td>
+                    <td class="remove"><button class="remove">x</button></td>
                   </tr>
                 </tbody>
             </table>
           </div>
     </main>
   </div>
+
+  <footer>
+    <p>Desenvolvido por <a ckass="footer-link" href="https://github.com/loadrp">loadrp</a></p>
+  </footer>
     
 </body>
 </html>
