@@ -1,0 +1,5 @@
+// 5 métodos - Listar vários usuários, 
+ // exibir um registro específico, 
+ // criar um registro específico POST, 
+ // update PUT atualizar um registro, 
+ // delete DELETE para remover registro.
