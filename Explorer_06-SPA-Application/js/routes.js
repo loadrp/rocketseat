@@ -36,14 +36,17 @@ export class Router {
     
     backgroundHandler(){
         if (window.location.pathname == "/explorer"){
-            document.body.style.backgroundImage = "url('/images/mountains-universe-3.png')";
+            document.body.style.backgroundImage = "url('./images/mountains-universe-3.png')";
             
         }
+        else if (window.location.pathname == "/404"){
+            document.body.style.backgroundImage = "url('./images/mountains-universe-1.png')";
+        }
         else if (window.location.pathname == "/"){
-            document.body.style.backgroundImage = "url('/images/mountains-universe-1.png')";
+            document.body.style.backgroundImage = "url('./images/mountains-universe-1.png')";
         }
         else if (window.location.pathname == "/universe"){
-            document.body.style.backgroundImage = "url('/images/mountains-universe-2.png')";
+            document.body.style.backgroundImage = "url('./images/mountains-universe-2.png')";
         }
     }
 }
