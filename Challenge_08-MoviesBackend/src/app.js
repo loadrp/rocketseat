@@ -3,7 +3,8 @@ const router = require("./routes")
 
 
 const app = express();
-app.use(router)
-const port = 3200
+app.use(express.json());
+app.use(router);
+
 
 module.exports = app
