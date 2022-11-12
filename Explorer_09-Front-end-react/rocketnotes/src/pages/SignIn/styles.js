@@ -25,7 +25,7 @@ export const Form = styled.form`
   }
   >h2{
     font-size: 24rem;
-    margin: 0 48rem;
+    margin: 48rem 0rem;
   }
   >p{
     font-size: 14rem;
