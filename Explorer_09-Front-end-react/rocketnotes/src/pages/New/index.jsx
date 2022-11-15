@@ -2,6 +2,8 @@ import {Header} from '../../components/Header'
 import { Container, Form } from './styles'
 import { Input } from '../../components/Input'
 import { Textarea } from '../../components/Textarea'
+import { Noteitem } from '../../components/Noteitem'
+import { Section } from '../../components/Section'
 
 
 
