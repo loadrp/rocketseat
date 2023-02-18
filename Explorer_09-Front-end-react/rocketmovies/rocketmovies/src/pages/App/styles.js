@@ -9,15 +9,17 @@ export const Container = styled.div`
   grid-template-areas: 
   "header"
   "content";
+  overflow-y: hidden;
+ 
+
 
   > main {
-    grid-area: content;
-    overflow-y: scroll;
-    padding: 64rem 0;
-    
+  grid-area: content;
 
+  padding: 64rem 0;
   }
-
+  
+  
   .title{
     width: 100%;
     align-items: center;
@@ -50,6 +52,27 @@ export const Content = styled.div`
   max-width: 1137rem;
   margin: 0 auto;
   padding: 20px;
+  
+  .Notas {
+    height: 500px; /* Defina a altura máxima para que o scroll funcione */
+    overflow-y: scroll;
+    margin-top: 15px;
+
+    /* estiliza o scrollbar somente no Google Chrome */
+    ::-webkit-scrollbar {
+      width: 12px;
+      background-color: ${({theme}) => theme.COLORS.WHITE};
+    }
+
+    /* estilo do thumb do scrollbar */
+    ::-webkit-scrollbar-thumb {
+      background-color: ${({theme}) => theme.COLORS.PINK};
+      border-radius: 10px;
+    }
+  }
+
+    
+  
 
   > h1{
     font-size: 32rem;
@@ -65,3 +88,4 @@ export const Content = styled.div`
   
 
 `
+
