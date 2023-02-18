@@ -7,9 +7,7 @@ import { MoviePreview } from '../../components/MoviePreview'
 export function ShowMovie(){
   return(
     <Container>
-      <body>
-        
-      </body>
+  
     <Header/>
      
      
