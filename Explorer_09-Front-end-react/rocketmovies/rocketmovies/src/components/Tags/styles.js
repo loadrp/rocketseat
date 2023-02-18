@@ -7,7 +7,8 @@ export const TagButton = styled.button`
   font-size: 12px;
   border-radius: 5px;
   color: ${({theme}) => theme.COLORS.WHITE};
-  background-color: ${({theme})=> theme.COLORS.BG_800};
+  background-color: ${({theme})=> theme.COLORS.BG_700};
   width: 121px;
   height: 24px;
+  
 `
