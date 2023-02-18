@@ -61,7 +61,7 @@ export const Content = styled.div`
     /* estiliza o scrollbar somente no Google Chrome */
     ::-webkit-scrollbar {
       width: 12px;
-      background-color: ${({theme}) => theme.COLORS.WHITE};
+      background-color: ${({ theme }) => theme.COLORS.BG_800};
     }
 
     /* estilo do thumb do scrollbar */
