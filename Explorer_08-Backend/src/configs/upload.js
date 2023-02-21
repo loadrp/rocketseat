@@ -19,7 +19,7 @@ const MULTER = {
 };
 
 module.exports = {
-  TMP_FOLDERP,
+  TMP_FOLDER,
   UPLOADS_FOLDER,
   MULTER,
 
