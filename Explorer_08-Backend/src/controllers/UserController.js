@@ -6,6 +6,7 @@ const sqliteConnection = require("../database/sqlite")
 class UserController {
     
     async create(request, response) {
+        
         const database = await sqliteConnection();
         const { name , email, password } = request.body
         const checkUserExist = await database.get("SELECT * FROM users WHERE email = (?)", [email])

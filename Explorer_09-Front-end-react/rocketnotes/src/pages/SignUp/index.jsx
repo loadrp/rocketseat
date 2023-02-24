@@ -2,31 +2,38 @@ import { Container, Form, Background} from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from '../../components/Button'
 import { FiLock, FiLogIn, FiMail, FiUser } from "react-icons/fi";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {useState} from "react";
 import {api} from '../../services/api'
 
 export function SignUp(){
-  const [name,setName] = useState("");
-  const [email,setEmail] = useState("");
-  const [password,setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   function handleSignUp(){
+  
     if(!name || !email || !password) {
       return alert("Preencha todos os campos!");
     }
     
     api.post("/users", {name , email, password})
     .then(()=>{
-      alert("Usuário cadastrado com sucesso!")
-      .catch(error => {
-        if(error.response){
-          alert(error.response.data.message);
-        }else{
-          alert("Não foi possível cadastrar");
-        }
-      })
+      alert("Usuário cadastrado com sucesso!");
+      navigate("/")
+      return
     })
+    .catch(error => {
+      console.log(error)
+      if(error.response){
+        return alert(error.response.data.message);
+      }
+      else{
+        return alert("Não foi possível cadastrar");
+      }
+    });
   
   }
 
@@ -41,7 +48,7 @@ export function SignUp(){
         <Input placeholder="E-mail" type="text" icon={FiMail} onChange={e => setEmail(e.target.value)}/>
         <Input placeholder="Senha" type="password" icon={FiLock} onChange={e => setPassword(e.target.value)}/>
         
-        <Button title="Cadastrar" onClick={handleSignUp}/>
+        <Button  title="Cadastrar" onClick={handleSignUp}/>
         <Link to="/">Voltar para o login</Link>
 
       </Form>
